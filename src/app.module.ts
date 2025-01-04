@@ -16,6 +16,7 @@ import { TrialModule } from './trial/trial.module';
     }),
     TrialModule,
     // AuthModule,代码冲突
+    // AuthModule,嗨嗨嗨
     // UsersModule,让我来改一改
   ],
   controllers: [AppController, NewController],
