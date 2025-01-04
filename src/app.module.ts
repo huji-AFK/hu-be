@@ -15,7 +15,7 @@ import { TrialModule } from './trial/trial.module';
       isGlobal: true, // 设置为全局模块
     }),
     TrialModule,
-    // AuthModule,
+    // AuthModule,嗨嗨嗨
     // UsersModule,让我来改一改
   ],
   controllers: [AppController, NewController],
