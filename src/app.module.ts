@@ -7,6 +7,7 @@ import { DatabaseModule } from './database/database.module';
 import { TrialModule } from './trial/trial.module';
 // import { AuthModule } from './auth/auth.module';
 // import { UsersModule } from './users/users.module';
+import { UserController } from './user/user.controller';
 
 @Module({
   imports: [
@@ -19,7 +20,7 @@ import { TrialModule } from './trial/trial.module';
     // AuthModule,嗨嗨嗨
     // UsersModule,让我来改一改
   ],
-  controllers: [AppController, NewController],
+  controllers: [AppController, NewController, UserController],
   providers: [AppService],
 })
 export class AppModule { }
