@@ -6,7 +6,6 @@ export class AppController {
   constructor(private readonly appService: AppService) { }
 
   @Get()
-  @Render('default/index')
   getHello() {
     return { name: 'Nest' };
   }
