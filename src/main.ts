@@ -3,6 +3,7 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
 import { NestExpressApplication } from '@nestjs/platform-express';
+import * as cookieParser from 'cookie-parser';
 import { join } from 'path';
 
 async function bootstrap() {
@@ -15,6 +16,7 @@ async function bootstrap() {
   app.setViewEngine('ejs'); // 模板引擎
 
   app.useGlobalPipes(new ValidationPipe()); // 启用全局验证
+  app.use(cookieParser()); // 使用cookie
   await app.listen(3000);
 }
 bootstrap();

@@ -1,5 +1,5 @@
 // src/trial/trial.controller.ts
-import { Controller, Get, Post, Body, Param, Put, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Put, Delete, Response } from '@nestjs/common';
 import { TrialService } from './trial.service';
 import { Trial } from './trial.entity';
 import { CreateTrialDto } from './create-trial.dto';
@@ -16,7 +16,8 @@ export class TrialController {
 
   // 获取所有汽车
   @Get()
-  async findAll(): Promise<Trial[]> {
+  async findAll(@Response() res): Promise<Trial[]> {
+    //  res.cookie('name', 'tobi', { maxAge: 1000 * 60 * 10, httpOnly: true });
     return this.trialService.findAll();
   }
 
